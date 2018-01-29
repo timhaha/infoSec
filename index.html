@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>search html table data by using jquery</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+	</head>
+	<body>
+		<br /><br />
+		<div class="container" style="width:900px;">
+			<form>
+				 <div class="form-group">
+  				 	<label for="email">Please Type the Country Name or Alpha Code to search</label>
+    					<input type="text" class="form-control" id="country"></br>
+  					<input type="button" value="Click Me to See the Result!" class="btn btn-default" onclick="post()">
+				</div>
+			</form>
+			<div class="table-responsive">
+				<text style="color:#FF00FF; font-size:18px">Please wait the search engine 2-4 seconds until the result comes up.</text>
+				<h1>JSON data Using Ajax</h1>
+				<h4>Please note: The language column does show languages, but did not position well.</h4>
+				<br />
+				
+				<table class="table table-bordered table-striped" id="employee_table">
+					<tr>
+						<th>Name</th>
+						<th>Alpha Code2</th>
+						<th>Alpha Code3</th>
+						<th>flag image</th>
+						<th>region</th>
+						<th>subregion</th>
+						<th>population</th>
+						<th style="position:relative">language</th>
+					</tr>
+					<tbody id="result">
+				
+					</tbody>				
+				</table>
+			</div>
+		</div>
+		
+		
+	</body>
+</html>
+<script>
+	function post(){		
+		var country=$('#country').val();
+		$.post('index2.php',{postcountry:country},
+			function(da){
+				$('#result').html(da);
+			});
+		}
+</script>
