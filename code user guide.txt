@@ -1,0 +1,12 @@
+1.please download the index.html and index2.php
+
+2.please use index.html as the entrance of the program
+
+3.please allow 2-4 seconds for the search engine to search and load results. 
+  the search engine works very well. We just need a little bit time to wait after submitting data.
+
+4. If you use wamp server, just put the two files(index.html and index2.php) into www folder
+   if you use xampp server, just put the two files(index.html and index2.php) into htdocs folder
+
+5. If you have any questions or the search engine has any problem(I believe it works well), please feel free to ask me immediately
+   I am more than happy to hear from you! Thank you so much!!
